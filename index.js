@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+import './index.scss'
 
 class Demo extends React.Component {
     constructor(props) {
