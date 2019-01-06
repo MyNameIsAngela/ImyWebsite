@@ -1,20 +1,14 @@
-import React, { Component } from 'react';
+import React from "react";
 import ReactDOM from 'react-dom';
+import { Router, Route, hashHistory } from 'react-router'
+import App from './app/App/index'
+import Home from './app/Home'
 import './index.scss'
 
-class Demo extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-        }
-    }
-    render() {
-        return (
-            <div className="demo">
-                demo
-            </div>
-        );
-    }
-}
-
-ReactDOM.render(<Demo />, document.getElementById('root'))
+ReactDOM.render((
+  <Router history={hashHistory}>
+    <Route path="/" component={Home} />
+    <Route path="/home" component={Home} />
+    <Route path="/app" component={App} />
+  </Router>
+), document.getElementById('root'))
